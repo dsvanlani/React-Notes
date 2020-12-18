@@ -5,14 +5,7 @@ from django.db import models
 class Note(models.Model):
 
     title = models.CharField(max_length=255)
+    body = models.TextField(default="")
 
-    def __str__():
-        return title
-
-class Content(models.Model):
-
-    parent = models.ForeignKey(Note, on_delete=models.CASCADE)
-    body = models.TextField()
-
-    def __str__():
-        return body
+    def __str__(self):
+        return f"{self.title}"

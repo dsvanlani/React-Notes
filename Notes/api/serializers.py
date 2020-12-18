@@ -5,10 +5,5 @@ class NoteSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Note
-        fields = ["id","title"]
+        fields = ["id","title", "body"]
 
-class ContentSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = Content
-        fields = ["parent", "body"]
