@@ -34,7 +34,7 @@ def NoteBody(request, id):
             serializer = NoteSerializer(note)
             return Response(serializer.data, status=status.HTTP_200_OK)
 
-        except NameError:
+        except Exception:
             return Response(status=status.HTTP_404_NOT_FOUND)
             
     if request.method == "PUT":
@@ -45,10 +45,3 @@ def NoteBody(request, id):
             return Response(serializer.data, status=status.HTTP_202_ACCEPTED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         
-        # serializer = NoteSerializer(note, data=request.data)
-        # # if serializer.is_valid():
-        # #     serializer.update()
-        # #     return Response(serializer.data, status=status.HTTP_202_ACCEPTED)
-        # # else:
-        # #     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-        # # return Response(status)
