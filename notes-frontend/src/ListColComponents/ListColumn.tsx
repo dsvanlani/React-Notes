@@ -6,7 +6,7 @@ import "../CSS/ListColumn/ListColumn.css"
 
 function ListColumn(props: any) {
     
-    const {setCreateNote, createNote, notes, setNotes, setSelectedNoteID} = props
+    const {setCreateNote, createNote, setNotes, setSelectedNoteID} = props
     const handleClick = () => {
         setCreateNote(!createNote)
     }
@@ -32,8 +32,8 @@ function ListColumn(props: any) {
             createNote
             ? (<div><CreateNoteInput 
             setSelectedNoteID={setSelectedNoteID}
-            notes={notes}
-            setNotes={setNotes}/>
+            setNotes={setNotes}
+            setCreateNote={setCreateNote}/>
             </div>)
             : null
         }

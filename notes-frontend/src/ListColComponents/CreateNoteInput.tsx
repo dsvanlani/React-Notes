@@ -1,9 +1,9 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Form, FormGroup, Input } from 'reactstrap'
 import apiUrl from '../fetchurls'
 
 function CreateNoteInput(props: any) {
-    const { setSelectedNoteID, notes, setNotes } = props
+    const { setSelectedNoteID, setCreateNote, setNotes } = props
     const [inputValue, setInputValue] = useState("")
     const [noteCreated, setNoteCreated] = useState(false)
 
@@ -30,6 +30,7 @@ function CreateNoteInput(props: any) {
             .then(response => {
                 setNoteCreated(!noteCreated)
                 setSelectedNoteID(response.id)
+                setCreateNote(false)
             })
         }
     }
@@ -39,6 +40,7 @@ function CreateNoteInput(props: any) {
         .then(data => data.json())
         .then(response => setNotes(response))
     }, [noteCreated])
+
     return (
         <Form>
             <FormGroup>
