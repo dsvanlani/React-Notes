@@ -1,8 +1,10 @@
 #newNoteButton {
-    margin-top: 8px;
+    margin-top: 0;
 }
 
 .note-list-item {
     width: 100%;
     text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

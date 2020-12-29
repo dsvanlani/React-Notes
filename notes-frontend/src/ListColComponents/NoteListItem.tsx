@@ -8,10 +8,9 @@ function NoteListItem(props: any) {
         setSelectedNoteID(data.id)
     }
 
-
     return (
         <Row>
-            <Col>
+            <Col className="text-nowrap">
                 <button 
                 className="note-list-item"
                 onClick={handleClick}>

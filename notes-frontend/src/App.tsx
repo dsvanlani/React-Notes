@@ -28,9 +28,9 @@ function App() {
     })
 
   return (
-  <Container fluid={true}>
-    <Row noGutters={true}>
-      <Col xs="3">
+  <Container>
+    <Row id="outermost-row">
+      <Col xs="3" id="list-column">
         <ListColumn 
         setSelectedNoteID={setSelectedNoteID}
         setCreateNote={setCreateNote}

@@ -45,7 +45,7 @@ function BodyColumn(props: any) {
             </div>
         )
     } else {
-        return <h3>None Selected</h3>
+        return <></>
     }
 
 }

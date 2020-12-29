@@ -12,20 +12,20 @@ function ListColumn(props: any) {
     }
 
     return (
-        <>
+        <div id="list-column">
         <Row>
-            <Col>
-                <h1>List</h1>
+            <Col className="text-nowrap">
+                <h5>Your Notes</h5>
             </Col>
-            <Col>
-                <Button 
+            <Col xs="1">
+                <Button
                 id= "newNoteButton" 
-                color="success" 
+                color="link" 
                 size="sm" 
                 className="float-right"
                 onClick={handleClick}>
                     {createNote ? "-":"+"}
-                </Button>
+                </Button>    
             </Col>
         </Row>
         {
@@ -38,7 +38,7 @@ function ListColumn(props: any) {
             : null
         }
             {props.children}
-        </>
+        </div>
     )
 }
 

@@ -1,0 +1,13 @@
+html, body, #root, .container, #outermost-row {
+    height: 100%;
+}
+
+body {
+    padding-top: 10px;
+}
+
+@media (max-width: 767.98px) {
+    #list-column {
+        display: none;
+    }
+ }

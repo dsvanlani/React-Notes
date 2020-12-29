@@ -22,11 +22,11 @@ function BodyColumnHeader(props: any) {
 
     return (
         <Row>
-            <Col>
-                <h3>{title}</h3>
+            <Col xs="10" className="text-center">
+                <h5>{title}</h5>
             </Col>
-            <Col xs={2} className="float-right">
-                <Button onClick={handleSave}>Save</Button>
+            <Col>
+                <Button className="float-right" size="sm" onClick={handleSave}>Save</Button>
             </Col>
         </Row>
     )
