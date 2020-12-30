@@ -33,6 +33,10 @@ function CreateNoteInput(props: any) {
                 setCreateNote(false)
             })
         }
+
+        if (event.keyCode === 27) {
+            setCreateNote(false)
+        }
     }
 
     useEffect(() => {

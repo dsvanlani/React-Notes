@@ -8,7 +8,7 @@ function BodyColumn(props: any) {
     const [bodyValue, setBodyValue] = useState("")
     const [title, setTitle] = useState("")
 
-    const {selectedNoteID} = props
+    const {selectedNoteID, expandButton, noteListOpen, setNoteListOpen} = props
 
     function handleChange(event: any) {
         setBodyValue(event.target.value)
@@ -36,7 +36,10 @@ function BodyColumn(props: any) {
                 <BodyColumnHeader 
                 title={title} 
                 selectedNoteID={selectedNoteID}
-                bodyValue={bodyValue}/>
+                bodyValue={bodyValue}
+                expandButton={expandButton}
+                noteListOpen={noteListOpen}
+                setNoteListOpen={setNoteListOpen}/>
                 <Form>
                     <FormGroup>
                         <Input id="textarea" type="textarea" value={bodyValue} onChange={handleChange}></Input>

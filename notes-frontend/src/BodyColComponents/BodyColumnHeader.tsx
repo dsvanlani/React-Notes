@@ -1,9 +1,10 @@
 import React from 'react'
 import { Row, Col, Button } from 'reactstrap'
 import apiUrl from '../fetchurls'
+import ExpandButton from './ExpandButton'
 
 function BodyColumnHeader(props: any) {
-    const { title, selectedNoteID, bodyValue } = props
+    const { title, selectedNoteID, bodyValue, noteListOpen, setNoteListOpen } = props
 
     const handleSave = () => {
         fetch(`${apiUrl}/${selectedNoteID}/`, {
@@ -23,6 +24,11 @@ function BodyColumnHeader(props: any) {
     return (
         <Row>
             <Col xs="10" className="text-center">
+                {
+                    !noteListOpen
+                    ? <ExpandButton setNoteListOpen={setNoteListOpen}/>
+                    : null
+                }
                 <h5>{title}</h5>
             </Col>
             <Col>
